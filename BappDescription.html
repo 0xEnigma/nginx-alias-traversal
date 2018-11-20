@@ -1,0 +1,18 @@
+<p>This extension detects NGINX alias traversal due to misconfiguration.</p>
+
+<p>The technique is based on Orange Tsai's BlackHat USA 2018 <a href="https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf">
+    Presentation</a></p>
+
+<p>A server is assumed to be vulnerable if a request to an existing path like `https://example.com/static../` returns 403. To eliminate false positives the misconfiguration
+    has to be confirmed by successfully requesting an existing resource via path traversal. This is done as follows:</p>
+
+<p>For the URL https://example.com/folder1/folder2/static/main.css it generates the following links:</p>
+
+<pre>https://example.com/folder1../folder1/folder2/static/main.css
+https://example.com/folder1../%s/folder2/static/main.css
+https://example.com/folder1/folder2../folder2/static/main.css
+https://example.com/folder1/folder2../%s/static/main.css
+https://example.com/folder1/folder2/static../static/main.css
+    https://example.com/folder1/folder2/static../%s/main.css</pre>
+
+<p>Where `%s` are common directories used in alias paths based on around 9500 nginx configuration files from GH (thanks <a href="https://twitter.com/TomNomNom">@TomNomNom</a>), see directories.txt.</p>

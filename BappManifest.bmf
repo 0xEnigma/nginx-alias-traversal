@@ -1,0 +1,12 @@
+Uuid: a5fdd2cdffa6410eb530de5a4c294d3a
+ExtensionType: 2
+Name: NGINX Alias Traversal
+RepoName: nginx-alias-traversal
+ScreenVersion: 1.0
+SerialVersion: 0
+MinPlatformVersion: 0
+ProOnly: False
+Author: Martin Bajaník
+ShortDescription: Detects NGINX alias traversal due to misconfiguration.
+EntryPoint: off-by-slash.py
+BuildCommand: 
