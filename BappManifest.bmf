@@ -5,7 +5,7 @@ RepoName: nginx-alias-traversal
 ScreenVersion: 1.0
 SerialVersion: 0
 MinPlatformVersion: 0
-ProOnly: False
+ProOnly: True
 Author: Martin Bajaník
 ShortDescription: Detects NGINX alias traversal due to misconfiguration.
 EntryPoint: off-by-slash.py
