@@ -3,10 +3,10 @@ ExtensionType: 2
 Name: NGINX Alias Traversal
 RepoName: nginx-alias-traversal
 ScreenVersion: 1.1
-SerialVersion: 1
+SerialVersion: 3
 MinPlatformVersion: 0
 ProOnly: True
-Author: Martin Bajaník
+Author: Martin Bajanik (@_bayotop)
 ShortDescription: Detects NGINX alias traversal due to misconfiguration.
 EntryPoint: off-by-slash.py
 BuildCommand: 
