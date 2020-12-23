@@ -2,8 +2,8 @@ Uuid: a5fdd2cdffa6410eb530de5a4c294d3a
 ExtensionType: 2
 Name: NGINX Alias Traversal
 RepoName: nginx-alias-traversal
-ScreenVersion: 1.0
-SerialVersion: 0
+ScreenVersion: 1.1
+SerialVersion: 1
 MinPlatformVersion: 0
 ProOnly: True
 Author: Martin Bajaník
